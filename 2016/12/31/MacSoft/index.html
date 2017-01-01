@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="简单记">
+<meta name="description" content="......">
 <meta property="og:type" content="article">
-<meta property="og:title" content="胡乱记记">
-<meta property="og:url" content="http://yoursite.com/2016/12/17/Soft/index.html">
+<meta property="og:title" content="MAC系统下日常使用软件的安装">
+<meta property="og:url" content="http://yoursite.com/2016/12/31/MacSoft/index.html">
 <meta property="og:site_name" content="OhaiyoFei">
-<meta property="og:description" content="简单记">
-<meta property="og:updated_time" content="2016-12-18T06:23:17.000Z">
+<meta property="og:description" content="......">
+<meta property="og:updated_time" content="2017-01-01T04:04:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡乱记记">
-<meta name="twitter:description" content="简单记">
+<meta name="twitter:title" content="MAC系统下日常使用软件的安装">
+<meta name="twitter:description" content="......">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> 胡乱记记 | OhaiyoFei </title>
+  <title> MAC系统下日常使用软件的安装 | OhaiyoFei </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                胡乱记记
+                MAC系统下日常使用软件的安装
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-17T00:00:00+08:00" content="2016-12-17">
-              2016-12-17
+            <time itemprop="dateCreated" datetime="2016-12-31T00:00:00+08:00" content="2016-12-31">
+              2016-12-31
             </time>
           </span>
 
@@ -277,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/note/" itemprop="url" rel="index">
-                    <span itemprop="name">note</span>
+                  <a href="/categories/MAC/" itemprop="url" rel="index">
+                    <span itemprop="name">MAC</span>
                   </a>
                 </span>
 
@@ -310,24 +310,27 @@
       
 
       
-        <p>最近在弄暑假自己遗留下来的一些坑，比如搭建一下自己的电脑环境，让其用起来比较舒服。</p>
-<p>发现自己台式机已经很好了，可是马上要走了，有时候觉得挺可惜的，当初花那么大的心思搭建</p>
-<p>的环境，要说再见了，即使是电脑也挺遗憾的，真想带着走。</p>
-<h2 id="简单记记，日后再改"><a href="#简单记记，日后再改" class="headerlink" title="简单记记，日后再改"></a>简单记记，日后再改</h2><pre><code>* 熟悉了自己的电脑目录，重新整理了一下自己电脑文件目录，应该怎么管理更好
-
-* 重新熟悉一下git和github等等
-
-* 配置自己的终端,配色方案solarized和字体等等,shell用zsh,熟悉了~/.zshrc文件的结构
-
-* 配置vim，主要是~/.vimrc文件,配色方案在~/.vim/colors下，这个是个长期工作
-
-* 慢慢学会使用Alfred和Spotlight这两个效率软件
-</code></pre><p>python的版本管理用pyenv,电脑上目前安装了3个版本的python(系统自带、anaconda2-4.0.0、anaconda3-4.0.0)</p>
-<p>自己用pyenv安装的python在~/.pyenv/version目录下，因为anaconda自带了spyder，所以python的IDE主要还是用spyder</p>
-<p>R语言主要用Rstudio来作统计分析，R语言做统计分析真的挺好用的，有了R和python，发现自己</p>
-<p>好久都没用matlab,有时候发现戒了matlab也挺好的, 最近感觉自己需要急切熟悉和精通一门脚本语言，</p>
-<p>这样很多东西可以一个命令解决了。</p>
-<p>今天就记这么多吧，挺乱的，发现自己应该多整理和多总结，这样才能有所思考</p>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>   首先肯定要保证自己的MACOS系统已经配置好了，具体就是一些在命令行下工作环境的配置，Xcode、安装包管理器Homebrew(类似yum/apt-get)，Zsh、Vim和git的配置，Python环境的管理等等这些工作,具体可参考<a href="http://sourabhbajaj.com/mac-setup/Apps/Settings.html" target="_blank" rel="external">这篇博客</a></p>
+<h2 id="日常使用"><a href="#日常使用" class="headerlink" title="日常使用"></a>日常使用</h2><pre><code>上面配置工作还是挺重要的，我目前也是出于熟悉阶段，不是特别精通，等以后精通了，再来记录一下怎么用MacOS系统搭建舒适的研究开发环境。下面主要介绍一下普通使用者经常需要使用的软件安装：
+</code></pre><ul>
+<li><a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a></li>
+<li>[office2016 for MAC]</li>
+<li>[Matlab2016b for MAC]</li>
+</ul>
+<p>下面我来简要总计一下这几个软件安装，第一个是免费开源软件，后面连个是商业软件，这里我使用的是破解版，没钱好吧。。。对于Matla我使用的频率不是特别高了，主要还是用Python/R这些免费开源的软件来代替了，但毕竟用的人挺多的，所以还是在自己电脑装一个吧，以备不时之需。</p>
+<h3 id="Aria2"><a href="#Aria2" class="headerlink" title="Aria2"></a>Aria2</h3><p><a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a>是一款支持多种协议的轻量级命令行下载工具。大家经常需要从网上下载资源（比如百度云盘），但百度云客户端的下载速度实在太慢，所以我主要使用Aria2，这个小软件的优点挺多的，特别跟Chrome的插件配合使用体验非常好。</p>
+<pre><code>1.你可以在 [Aria2](https://aria2.github.io/) 的 Download 下载对应的安装程序。下载之后直接双击打开安装即可。喜欢用 homebrew 的兄弟也可以使用命令brew install aria2来安装
+2.因为Aria2是使用命令行进行下载，但这个还是不太方便，所以要许多人给Aria2开发了许多UI界面,比如浏览器界面[webui-aria2](https://github.com/ziahamza/webui-aria2)、[Aria2GUI](https://github.com/yangshun1029/aria2gui)等，我使用的是Aria2GUI，从项目主页下载对应最新版的压缩包，解压缩后，打开dmg文件，然后拖拽Aria2GUI到你的应用文件夹即安装成功，打开运行
+3.根据你使用的浏览器，从[BaiduExporter项目](https://github.com/acgotaku/BaiduExporter)下载浏览器对应的插件并安装连接，上面有安装教程(之前Chrome的插件商店上，能直接安装的，不知道为啥下架了)，对于Chrome浏览器，还要安装[YAAW](https://github.com/acgotaku/YAAW-for-Chrome),这个可以直接从Chrome商店直接搜索安装。如果你想从115网盘下载或者迅雷离线，可以下载对应的插件，挺方便的。
+4.启动aria2GUI，重启浏览器，打开你想要下载的百度云盘连接，此时你会看到这个&quot;导出下载“(偶尔需要等待那么10秒，才能看到导出tab)， 选择Aria2 RPC. 然后刷新(refresh)你的Arai2GUI，就可下载，速度挺快的。
+</code></pre><h3 id="office2016-for-MAC"><a href="#office2016-for-MAC" class="headerlink" title="office2016 for MAC"></a>office2016 for MAC</h3><pre><code>配置好了这些，安装office2016就很快了，从百度盘下载链接: [https://pan.baidu.com/s/1o8nRXou](https://pan.baidu.com/s/1o8nRXou) 密码: 9y67，下载Office2016 for Mac破解版，安装完后不要打开office软件，打开破解补丁.dmg，里面有把蓝色的钥匙，双击，出现一把黑色的锁，点击，输入系统密码，OK~搞定
+</code></pre><h3 id="Matlab2016b-for-MAC"><a href="#Matlab2016b-for-MAC" class="headerlink" title="Matlab2016b for MAC"></a>Matlab2016b for MAC</h3><p>下载从百度云盘<a href="https://pan.baidu.com/s/1miQ7RlQ" target="_blank" rel="external">https://pan.baidu.com/s/1miQ7RlQ</a> 密码：pha8 下载破解补丁，简单分成三步:</p>
+<pre><code>* 使用Key:09806-07443-53955-64350-21751-41297离线安装Matlab2016b
+* 用破解补丁里libmwservices.dylib替换/Applications/Matlab/bin/maci64/libmwservices.dylib
+* 打开Matlab，使用license.lic离线激活使用，完成
+</code></pre><p>具体可参看这篇<a href="http://www.sdifenzhou.com/matlab2016b.html" target="_blank" rel="external">博客</a></p>
+<p>##总结</p>
+<p>最后发现这篇博客主要还是介绍下载工具<a href="https://aria2.github.io/" target="_blank" rel="external">Aria2</a></p>
 
       
     </div>
@@ -352,17 +355,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/15/Why-I-Blog/" rel="next" title="我为什么写博客？">
-                <i class="fa fa-chevron-left"></i> 我为什么写博客？
+              <a href="/2016/12/17/Soft/" rel="next" title="胡乱记记">
+                <i class="fa fa-chevron-left"></i> 胡乱记记
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/31/MacSoft/" rel="prev" title="MAC系统下日常使用软件的安装">
-                MAC系统下日常使用软件的安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,7 +468,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单记记，日后再改"><span class="nav-number">1.</span> <span class="nav-text">简单记记，日后再改</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常使用"><span class="nav-number">2.</span> <span class="nav-text">日常使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Aria2"><span class="nav-number">2.1.</span> <span class="nav-text">Aria2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#office2016-for-MAC"><span class="nav-number">2.2.</span> <span class="nav-text">office2016 for MAC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matlab2016b-for-MAC"><span class="nav-number">2.3.</span> <span class="nav-text">Matlab2016b for MAC</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
