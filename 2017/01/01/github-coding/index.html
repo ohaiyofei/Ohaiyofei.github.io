@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/01/github-coding/index.html">
 <meta property="og:site_name" content="OhaiyoFei">
 <meta property="og:description" content="......">
-<meta property="og:updated_time" content="2017-01-03T03:32:49.000Z">
+<meta property="og:updated_time" content="2017-01-03T03:42:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将hexo博客同时部署和托管到github和coding">
 <meta name="twitter:description" content="......">
@@ -330,7 +330,7 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: </div><div class="line">       github: git@github.com:ohaiyofei/ohaiyofei.github.io.git,master</div><div class="line">       coding: git@git.coding.net:Ohaiyofei/Ohaiyofei.coding.me.git,master</div></pre></td></tr></table></figure>
 <p> 然后<code>hexo g</code>和<code>hexo d</code>即可，因为同时部署到了两个服务器上，所以通过<a href="http://ohaiyofei.github.io/" target="_blank" rel="external">http://ohaiyofei.github.io/</a>和<a href="http://ohaiyofei.coding.me/" target="_blank" rel="external">http://ohaiyofei.coding.me/</a>这两个域名都能访问我的博客，如果绑定了自己的域名，还可以通过第三个域名访问自己的博客。</p>
 <h3 id="托管博客源码"><a href="#托管博客源码" class="headerlink" title="托管博客源码"></a>托管博客源码</h3><p>为什么想托管自己的博客源码，如果换个新环境想写博客时，只要从github或者coding上clone一下，就可以接着写。为了托管博客的源码，我在github和Coding自己账户下各自建立项目，项目名称都是Ohaiyofei.blog,你可以安装自己的爱好给项目区名字。然后需要将本地博客的git仓库与这两个远程库建立关联，然后同时推送。在博客目录下使用以下命令即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git remote add all git@github.com:ohaiyofei/ohaiyofei.blog.git</div><div class="line">git remote set-url --add all git@git.coding.net:Ohaiyofei/Ohaiyofei.blog.git</div><div class="line">git push all --all</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote add all git@github.com:ohaiyofei/ohaiyofei.blog.git</div><div class="line">$ git remote <span class="built_in">set</span>-url --add all git@git.coding.net:Ohaiyofei/Ohaiyofei.blog.git</div><div class="line">$ git push all --all</div></pre></td></tr></table></figure>
 <p>当然使用上述命令的前提是你已经用git来管理自己的博客源码了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇博客写得有点长，算是对自己搭建博客的一个总结吧。</p>
 
