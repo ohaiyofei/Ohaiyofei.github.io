@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="简单记">
+<meta name="description" content="......">
 <meta property="og:type" content="article">
-<meta property="og:title" content="胡乱记记">
-<meta property="og:url" content="http://yoursite.com/2016/12/17/Soft/index.html">
+<meta property="og:title" content="将hexo博客同时部署和托管到github和coding">
+<meta property="og:url" content="http://yoursite.com/2017/01/01/github-coding/index.html">
 <meta property="og:site_name" content="OhaiyoFei">
-<meta property="og:description" content="简单记">
-<meta property="og:updated_time" content="2016-12-18T06:23:17.000Z">
+<meta property="og:description" content="......">
+<meta property="og:updated_time" content="2017-01-03T03:05:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡乱记记">
-<meta name="twitter:description" content="简单记">
+<meta name="twitter:title" content="将hexo博客同时部署和托管到github和coding">
+<meta name="twitter:description" content="......">
 
 
 
@@ -111,7 +111,7 @@
   };
 </script>
 
-  <title> 胡乱记记 | OhaiyoFei </title>
+  <title> 将hexo博客同时部署和托管到github和coding | OhaiyoFei </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -251,7 +251,7 @@
             
             
               
-                胡乱记记
+                将hexo博客同时部署和托管到github和coding
               
             
           </h1>
@@ -263,8 +263,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-17T00:00:00+08:00" content="2016-12-17">
-              2016-12-17
+            <time itemprop="dateCreated" datetime="2017-01-01T00:00:00+08:00" content="2017-01-01">
+              2017-01-01
             </time>
           </span>
 
@@ -277,8 +277,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/note/" itemprop="url" rel="index">
-                    <span itemprop="name">note</span>
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
                   </a>
                 </span>
 
@@ -310,24 +310,25 @@
       
 
       
-        <p>最近在弄暑假自己遗留下来的一些坑，比如搭建一下自己的电脑环境，让其用起来比较舒服。</p>
-<p>发现自己台式机已经很好了，可是马上要走了，有时候觉得挺可惜的，当初花那么大的心思搭建</p>
-<p>的环境，要说再见了，即使是电脑也挺遗憾的，真想带着走。</p>
-<h2 id="简单记记，日后再改"><a href="#简单记记，日后再改" class="headerlink" title="简单记记，日后再改"></a>简单记记，日后再改</h2><pre><code>* 熟悉了自己的电脑目录，重新整理了一下自己电脑文件目录，应该怎么管理更好
-
-* 重新熟悉一下git和github等等
-
-* 配置自己的终端,配色方案solarized和字体等等,shell用zsh,熟悉了~/.zshrc文件的结构
-
-* 配置vim，主要是~/.vimrc文件,配色方案在~/.vim/colors下，这个是个长期工作
-
-* 慢慢学会使用Alfred和Spotlight这两个效率软件
-</code></pre><p>python的版本管理用pyenv,电脑上目前安装了3个版本的python(系统自带、anaconda2-4.0.0、anaconda3-4.0.0)</p>
-<p>自己用pyenv安装的python在~/.pyenv/version目录下，因为anaconda自带了spyder，所以python的IDE主要还是用spyder</p>
-<p>R语言主要用Rstudio来作统计分析，R语言做统计分析真的挺好用的，有了R和python，发现自己</p>
-<p>好久都没用matlab,有时候发现戒了matlab也挺好的, 最近感觉自己需要急切熟悉和精通一门脚本语言，</p>
-<p>这样很多东西可以一个命令解决了。</p>
-<p>今天就记这么多吧，挺乱的，发现自己应该多整理和多总结，这样才能有所思考</p>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>首先肯帝需要<a href="github.com">Github</a>和<a href="coding.net">Coding</a>两个网站注册账号，<a href="github.com">Github</a>可以免费托管开源代码，私有库的建立需要付费，是国外的一个网站。<a href="coding.net">Coding</a>可以免费托管开源代码，同时他让用户免费建立私有库，提供的服务挺好的，是国内的网站。</p>
+<h2 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h2><p><a href="http://hexo.io" target="_blank" rel="external">Hexo</a>是一款基于 Node.js 的静态博客框架，Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。用Hexo如何搭建博客的技术贴网上有很多，这里主要介绍一下Hexo源码的文件结构：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">|-- public</div><div class="line">|-- source</div><div class="line">|-- theme</div><div class="line">|-- _config.yml等文件</div></pre></td></tr></table></figure>
+<p>下面介绍一下每个目录</p>
+<p>###public<br>  <code>public</code>文件夹是在执行<code>hexo generate</code>后生成的。<br>所以<code>/public</code> 文件夹中放置的文件，自然就是最终网页显示需要的静态网页文件，这个是因每个人博客的内容不同而不同，所以源码中不必要存在这个文件夹，这一点在我们查看<code>.gitignore</code>时会发现，这个文件夹是被忽略的，并不需要上传。当我们写好博客之后，执行<code>hexo g</code>生成网页文件，然后执行 <code>hexo deploy</code>，就会将<code>public</code>里面的文件push到github的<code>username.github.io</code>这个仓库和coding的<code>username.coding.me</code>这个仓库（如果你是同时托管），之后就能访问你的博客了。</p>
+<p>###source<br>这个文件夹是用来存放你博客的文本内容。<br>打开<code>/source</code>之后，发现有一个<code>_post</code>文件夹，此文件夹中就是存放你所有博文内容的文件夹，博文是用markdown 来写的，写好之后，放入 _post即可。除此之外 <code>source</code> 还可以加入 <code>about</code>等文件夹，用来写 <code>关于我</code> 等页面的文本内容。</p>
+<p>###theme<br><code>theme</code> 自然就是放置博客主题的文件夹，比如源生的主题：<code>landscape</code>。自己通过<code>clone</code> 安装的三方主题也会出现在这里。</p>
+<p>###_config.yml等<br>剩下的这些就是配置文件等</p>
+<p>##同时部署博客网页文件和托管博客源码<br>在向github或者Coding上推送代码之前，需要简单了解一下Git传输资料的四种协议：</p>
+<ul>
+<li><strong>本地协议</strong></li>
+<li><strong>HTTPS协议</strong> 使用加密的网页访问通道<strong>读写</strong>仓库，使用用户名及密码进行鉴权，推荐轻量级用户使用。</li>
+<li><strong>SSH协议</strong>  使用加密通道<strong>读写</strong>仓库，无单次上传限制，需先设置“账户 SSH 公钥”，完成配对验证，推荐资深用户或经常推送大型文件用户使用</li>
+<li><strong>Git协议</strong> 网络传输协议里最快的，但缺乏授权机制，而且仅有<strong>只读</strong>权限，故仅适用于公开项目 clone 使用，</li>
+</ul>
+<p>我使用的是SSH协议，所以我先在github和coding上设置SSH密钥，具体怎么设置网上有很多教程。</p>
+<p>###部署博客网页文件<br>在github和Coding上各自建立项目，项目名称分别为<code>username.github.io</code>和<code>username.coding.me</code>，username是你自己的账户名，我的是<code>Ohaiyofei</code>,然后将博客根目录下的_config.yml的deploy修改成类似以下代码即可：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: </div><div class="line">       github: git@github.com:ohaiyofei/ohaiyofei.github.io.git,master</div><div class="line">       coding: git@git.coding.net:Ohaiyofei/Ohaiyofei.git,master</div></pre></td></tr></table></figure>
+<p> 然后</p>
 
       
     </div>
@@ -352,17 +353,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/15/Why-I-Blog/" rel="next" title="我为什么写博客？">
-                <i class="fa fa-chevron-left"></i> 我为什么写博客？
+              <a href="/2016/12/31/MacSoft/" rel="next" title="MAC系统下日常使用软件的安装">
+                <i class="fa fa-chevron-left"></i> MAC系统下日常使用软件的安装
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/31/MacSoft/" rel="prev" title="MAC系统下日常使用软件的安装">
-                MAC系统下日常使用软件的安装 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,7 +466,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单记记，日后再改"><span class="nav-number">1.</span> <span class="nav-text">简单记记，日后再改</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo搭建博客"><span class="nav-number">2.</span> <span class="nav-text">Hexo搭建博客</span></a></li></ol></div>
             
           </div>
         </section>
