@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/01/github-coding/index.html">
 <meta property="og:site_name" content="OhaiyoFei">
 <meta property="og:description" content="......">
-<meta property="og:updated_time" content="2017-01-07T14:17:00.000Z">
+<meta property="og:updated_time" content="2017-05-14T14:59:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="将hexo博客同时部署和托管到github和coding">
 <meta name="twitter:description" content="......">
@@ -326,11 +326,11 @@
 <li><strong>Git协议</strong> 网络传输协议里最快的，但缺乏授权机制，而且仅有<strong>只读</strong>权限，故仅适用于公开项目 clone 使用，</li>
 </ul>
 <p>我使用的是SSH协议，所以我先在github和coding上设置SSH公钥，具体怎么设置网上有很多教程。可以使用<code>ssh -T git@github.com</code>或者<code>ssh -T git@git.coding.net</code>来查看自己是否配置成功，如果有<code>successfully</code>信息输出，就表示成功了啦，这样可以接着下面的工作</p>
-<h3 id="部署博客网页文件"><a href="#部署博客网页文件" class="headerlink" title="部署博客网页文件"></a>部署博客网页文件</h3><p>在github和Coding的自己账户下各自建立项目，项目名称分别为<code>username.github.io</code>和<code>username.coding.me</code>，username是你自己的账户名，我的是<code>Ohaiyofei</code>。然后将博客根目录下的_config.yml的deploy修改成类似以下代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: </div><div class="line">       github: git@github.com:ohaiyofei/ohaiyofei.github.io.git,master</div><div class="line">       coding: git@git.coding.net:Ohaiyofei/Ohaiyofei.coding.me.git,master</div></pre></td></tr></table></figure></p>
+<h3 id="部署博客网页文件"><a href="#部署博客网页文件" class="headerlink" title="部署博客网页文件"></a>部署博客网页文件</h3><p>在github和Coding的自己账户下各自建立项目，项目名称分别为<code>username.github.io</code>和<code>username.coding.me</code>，<strong>username一定要是你自己的github和coding账户名</strong>，不然会出问题，因为github和coding只给自己的个人主页一个仓库。我的是<code>Ohaiyofei</code>。然后将博客根目录下的_config.yml的deploy修改成类似以下代码即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">repo: </div><div class="line">       github: git@github.com:ohaiyofei/ohaiyofei.github.io.git,master</div><div class="line">       coding: git@git.coding.net:Ohaiyofei/Ohaiyofei.coding.me.git,master</div></pre></td></tr></table></figure></p>
 <p>然后<code>hexo g</code>和<code>hexo d</code>即可，因为同时部署到了两个服务器上，所以通过<a href="http://ohaiyofei.github.io/" target="_blank" rel="external">http://ohaiyofei.github.io/</a>和<a href="http://ohaiyofei.coding.me/" target="_blank" rel="external">http://ohaiyofei.coding.me/</a>这两个域名都能访问我的博客，如果绑定了自己的域名，还可以通过第三个域名访问自己的博客。<br>上面的过程其实只是把自己博客的HTML文件上传到了github和coding,你可以查看自己的github和coding的仓库，里面只有HTML文件，没有博客的源码md文件，如果想把自己的博客源码也托管到github或者coding上面，就接着看下面，当然你也可以不托管公开，看自己的爱好，下面的内容就可以跳过啦。</p>
 <h3 id="托管博客源码"><a href="#托管博客源码" class="headerlink" title="托管博客源码"></a>托管博客源码</h3><p>为什么想托管自己的博客源码，主要是如果换个新环境（比如换了电脑）想写博客时，只要从github或者coding上clone一下，就可以接着写,也起一种备份的作用。为了托管博客的源码，我在github和Coding自己账户下各自建立项目，项目名称都是Ohaiyofei.blog,你可以安装自己的爱好给项目取名字。首先需要在本地用git管理自己的博客源码，在需要管理的项目目录下输入下面三个命令<code>git init</code>、<code>git add .</code>、<code>git commit -m&quot;First commit&quot;</code>即可用git管理自己任何项目的源码啦，然后建自己本地git仓库与这两个远程库建立关联，然后同时推送。怎么关联单个远程仓库和推送很简单，可以自己Google。在博客目录下使用以下命令即可：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git remote add all git@github.com:ohaiyofei/ohaiyofei.blog.git</div><div class="line">$ git remote <span class="built_in">set</span>-url --add all git@git.coding.net:Ohaiyofei/Ohaiyofei.blog.git</div><div class="line">$ git push all --all</div></pre></td></tr></table></figure>
-<p>做完上面工作之后，独立写博客的平台基本上算比较完善啦，然后每次写完博客后，使用<code>hexo g</code>和<code>hexo d</code>把博客网页文件部署到github和coding，使用<code>git commit -am&quot;*******&quot;</code>和<code>git push all --all</code>托管自己的博客，可以把上面的命令写到一个脚本文件里，这里每次写完博客只有一个命令即可。</p>
+<p>做完上面工作之后，独立写博客的平台基本上算比较完善啦，然后每次写完博客后，使用<code>hexo g</code>和<code>hexo d</code>把博客网页文件部署到github和coding，使用<code>git commit -am&quot;*******&quot;</code>和<code>git push all --all</code>托管自己的博客，可以把上面的命令写到一个脚本文件里，这样每次写完博客只用一个命令即可。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这篇博客写得有点长，算是对自己搭建博客的一个总结吧。</p>
 
       
@@ -430,7 +430,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -438,7 +438,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
